@@ -7,7 +7,7 @@ namespace ControlAsistencia
 {
     public partial class ControlAsistencia : Form
     {
-        // Diccionario: nombre del estudiante -> presente (true/false)
+
         private Dictionary<string, bool> asistencia = new Dictionary<string, bool>();
 
         public ControlAsistencia()
@@ -17,18 +17,17 @@ namespace ControlAsistencia
 
         private void ControlAsistencia_Load(object sender, EventArgs e)
         {
-            // Lista de estudiantes de ejemplo
+
             string[] estudiantes = { "Ana Pérez", "Luis Gómez", "María Rosa",
                                       "Carlos Díaz", "Sofía Martínez" };
 
             foreach (string nombre in estudiantes)
             {
-                asistencia[nombre] = false; // todos empiezan como ausentes
+                asistencia[nombre] = false;
                 lstEstudiantes.Items.Add(nombre);
             }
         }
 
-        // Al seleccionar un estudiante, el checkbox muestra su estado actual
         private void lstEstudiantes_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lstEstudiantes.SelectedItem != null)
@@ -38,7 +37,6 @@ namespace ControlAsistencia
             }
         }
 
-        // Botón "Marcar": guarda el estado del checkbox para el estudiante seleccionado
         private void btnMarcar_Click(object sender, EventArgs e)
         {
             if (lstEstudiantes.SelectedItem == null)
@@ -54,7 +52,6 @@ namespace ControlAsistencia
                 (chkPresente.Checked ? "PRESENTE" : "AUSENTE"));
         }
 
-        // Botón "Generar Resumen": arma el texto con presentes y ausentes
         private void btnResumen_Click(object sender, EventArgs e)
         {
             int presentes = asistencia.Count(a => a.Value == true);
