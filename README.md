@@ -4,6 +4,7 @@ Resumen
 
 Este repositorio contiene la resolución de los ejercicios desarrollados en clase formado por un grupo de 2, enfocados en el diseño de interfaces y el manejo de distintos controles de formulario. 
 
+
 Integrantes
 Diego Emmanuel Elías de Jesús Guzmán 2025-1648
 Leandro Steven Villanueva Ramos 2024-3767
