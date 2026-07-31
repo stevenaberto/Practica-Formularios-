@@ -7,7 +7,7 @@ namespace MenuColmado
 {
     public partial class MenudelColmado : Form
     {
-        // Diccionario: producto -> precio unitario
+        
         private Dictionary<string, decimal> productos = new Dictionary<string, decimal>();
 
         public MenudelColmado()
@@ -17,7 +17,7 @@ namespace MenuColmado
 
         private void MenudelColmado_Load(object sender, EventArgs e)
         {
-            // Productos de ejemplo con su precio
+            
             productos.Add("Arroz (lb)", 35.00m);
             productos.Add("Habichuelas (lb)", 60.00m);
             productos.Add("Aceite (botella)", 150.00m);
@@ -34,14 +34,14 @@ namespace MenuColmado
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            // Validar que haya un producto seleccionado
+           
             if (cboProductos.SelectedItem == null)
             {
                 MessageBox.Show("Selecciona un producto.");
                 return;
             }
 
-            // Validar que la cantidad sea un número válido
+           
             if (!decimal.TryParse(txtCantidad.Text, out decimal cantidad) || cantidad <= 0)
             {
                 MessageBox.Show("Ingresa una cantidad válida (número mayor que 0).");
